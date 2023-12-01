@@ -11,7 +11,6 @@
 
 <body>
     <main class="container">
-        <!-- <section class="conteudo"> -->
             <div class="descricao-mensagem">
                 <h1>
                     Ficou com dúvida? <br>
@@ -22,18 +21,22 @@
             </div>
     
             <form class="formulario">
-                <input type="text" id="nome-completo" class="nome-completo" placeholder="Nome Completo *" required>
+                <input type="text" id="nome-completo" class="nome-completo" placeholder="Nome Completo *">
+                <span class="campo-obrigatorio" id="campo-obrigatorio">campo obrigatorio</span>
     
-                <input type="email" class="email" id="email" placeholder="Email *" required>
+                <input type="email" class="email .validacao-confirmada" id="email" placeholder="Email *">
+                <span class="campo-obrigatorio" id="campo-obrigatorio">campo obrigatorio</span>
     
-                <input type="tel" class="telefone" id="telefone" placeholder="Telefone *" required>
+                <input type="tel" class="telefone" id="telefone" placeholder="Telefone *">
+                <span class="campo-obrigatorio" id="campo-obrigatorio">campo obrigatorio</span>
     
-                <input type="text" class="mensagem" id="mensagem" placeholder="Mensagem *" required>
-                <span>*campos obrigatórios</span>
+                <input type="text" class="mensagem" id="mensagem" placeholder="Mensagem *">
+                <span class="campo-obrigatorio" id="campo-obrigatorio">campo obrigatorio</span>
+
+                <span class="campos-obrigatorios">*campos obrigatórios</span>
     
-                <input type="submit" value="Enviar">
+                <input type="submit" class="submit" value="Enviar">
             </form>
-        <!-- </section> -->
     </main>
 
     <script src="./src/js/index.js"></script>
