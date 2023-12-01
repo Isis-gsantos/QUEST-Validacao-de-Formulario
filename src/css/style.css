@@ -1,10 +1,13 @@
 body {
-    background-image: url('../imagem/bg-repeat.jpg');
+    background-image: url('../imagem/bg-repeat.jpg'); 
+    background-size: contain;
+    
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .descricao-mensagem {
@@ -13,8 +16,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
     max-width: 300px;
-    margin: 0 50px;
+
     color: #ffffff;
 }
 
@@ -25,18 +29,25 @@ body {
     margin-bottom: 10px;
 }
 
-.descricao-mensagem p {
-    font-size: 15px;
-    
-}
-
 .formulario {
-    max-width: 340px;
-    height: 402px;
-    margin: 12px 50px;
+    max-width: 600px;
+    /* width: 400px; */
+    margin: 10px 0;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding: 20px;
+}
+
+.formulario input {
+    max-width: 300px;
+    margin: 20px;
+    height: 35px;
+    padding: 9px;
+    border-radius: 5px;
+}
+
+.formulario .mensagem {
+    height: 100px;
 }
