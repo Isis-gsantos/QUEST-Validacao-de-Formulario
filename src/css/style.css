@@ -77,6 +77,8 @@ body {
     background-color: #3CCC87;
     color: #ffffff;
     cursor: pointer;
+    max-width: 300px;
+    height: 35px;
 }
 
 /* MENSAGEM DE INVALIDAÇÃO */
