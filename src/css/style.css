@@ -88,6 +88,7 @@ body {
     display: none;
 }
 
-.validacao-confirmada {
+/* MENSAGEM DE VALIDAÇÃO */
+.campo-valido {
     border: 1px solid #00C22B;
 }
