@@ -8,32 +8,40 @@ const mensagemInput = document.getElementById("mensagem");
 function botaoEnviar() {
    const campoObrigatorioNome = document.getElementById("campo-obrigatorio-nome");
    const campoObrigatorioEmail = document.getElementById("campo-obrigatorio-email");
-   const campoObrigatorioTelefone = document.getElementById("campo-obrigatorio-telefone")
+   const campoObrigatorioTelefone = document.getElementById("campo-obrigatorio-telefone");
    const campoObrigatorioMensagem = document.getElementById("campo-obrigatorio-mensagem");
 
-   if(nomeCompleto.value === ""){
+   event.preventDefault();
+
+   if(nomeCompleto.value === "") {
       campoObrigatorioNome.style.display = "block";
       nomeCompleto.style.border = "1px solid #F52E2E";
    } else {
-      nomeCompleto.style.border = "border: 1px solid #00C22B";
-   }
+      nomeCompleto.style.borderColor = "#00C22B";
+      campoObrigatorioNome.style.display = "none"
+   };
 
-   // const validacaoEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+   if(emailInput.value === "") {
+      campoObrigatorioEmail.style.display = "block";
+      emailInput.style.border = "1px solid #F52E2E";
+   } else {
+      emailInput.style.borderColor = "#00C22B";
+      campoObrigatorioEmail.style.display = "none";
+   };
 
-   // if(validacaoEmail(emailInput.value)) {
-   //    campoObrigatorioEmail.style.display = "block";
-   //    emailInput.style.border = "1px solid #F52E2E";
-   // } else {
-   //    emailInput.style.border = "border: 1px solid #00C22B";
-   //    console.log("mensagem verde");
-   // }
+   if(telefoneInput.value === "") {
+      campoObrigatorioTelefone.style.display = "block";
+      telefoneInput.style.border = "1px solid #F52E2E";
+   } else {
+      telefoneInput.style.borderColor = "#00C22B";
+      campoObrigatorioTelefone.style.display = "none";
+   };
 
    if(mensagemInput.value === "") {
       campoObrigatorioMensagem.style.display = "block";
       mensagemInput.style.border = "1px solid #F52E2E";
    } else {
-      mensagemInput.style.border = "border: 1px solid #00C22B";
-      console.log("mensagem verde");
+      mensagemInput.style.borderColor = "#00C22B";
+      campoObrigatorioMensagem.style.display = "none";
    };
-
 };
